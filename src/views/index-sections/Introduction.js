@@ -51,17 +51,28 @@ function Introduction() {
     <>
       <div className="section section-basic" id="basic-elements">
         <Container>
-        <div className="typography-line" style={{marginTop: 30}}>
-                  <p>
-                    <span>Qu'est ce que Find-icament</span> Publiée en 2021, Find-icament est une application médicale
-                    vous permettant de gérer vos traitements tout en vous donnant divers renseignements sur ces médicaments.
+          <div className="typography-line" style={{ marginTop: 30 }}>
+            <p>
+              <span>
+                <Col sm="10">
+                  <img
+                    alt="..."
+                    className="rounded-circle"
+                    src={require("assets/img/old-phone.jpg").default}
+                  />
+                </Col>
+              </span>
+                    Publiée en 2021, Find-icament est une application médicale
+                    vous permettant de <b>gérer vos traitements</b> tout en vous donnant divers renseignements sur ces médicaments.
+                    <br/>
                     Basée sur une base de données officielle du gouvernement, nous proposons une large liste de médicaments.
-                    Parcourez cette liste, scanner une boite de médicament pour retrouvez toutes les informations dessus.
-                    Un planning vous propose également de créer des rappels pour vos traitements.
                     <br/><br/>
+                    <b>Parcourez cette liste, scanner une boite de médicament</b> pour retrouvez toutes les informations dessus.
+                    Un <b>planning</b> vous propose également de créer des rappels pour vos traitements.
+                    <br /><br />
                     L'application est disponible sur Android et IOS.
                   </p>
-                </div>
+          </div>
         </Container>
       </div>
     </>

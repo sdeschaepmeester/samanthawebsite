@@ -98,17 +98,21 @@ function CompareVersions() {
                         <b>Voici les Fonctionnalités auxquelles vous avez accès :</b>
                       </p>
                       <ul style={{ textAlign: 'left', marginTop: 15 }}>
-                        <li style={{ marginTop: 15 }}>
-                          Scanner de médicaments (10/jour maximum)
+                        <li style={ styles.list }>
+                          <i style={ styles.pillsIcon} class="fas fa-pills" />
+                          <span style={{ marginLeft: 10 }}>Scanner de médicaments (10/jour maximum) </span>
                         </li>
-                        <li style={{ marginTop: 15 }}>
-                          Test de compatibilité de médicaments (5/jour maximum)
+                        <li style={ styles.list }>
+                          <i style={ styles.pillsIcon} class="fas fa-pills" />
+                          <span style={{ marginLeft: 10 }}>Test de compatibilité de médicaments (5/jour maximum)</span>
                         </li>
-                        <li style={{ marginTop: 15 }}>
-                          Liste de médicaments
+                        <li style={ styles.list }>
+                          <i style={ styles.pillsIcon} class="fas fa-pills" />
+                          <span style={{ marginLeft: 10 }}>Liste de médicaments </span>
                         </li>
-                        <li style={{ marginTop: 15 }}>
-                          Planning de médicaments (5 traitements actifs en même temps)
+                        <li style={ styles.list }>
+                          <i style={ styles.pillsIcon} class="fas fa-pills" />
+                          <span style={{ marginLeft: 10 }}>Planning de médicaments (5 traitements actifs en même temps)</span>
                         </li>
                       </ul>
                     </TabPane>
@@ -125,18 +129,6 @@ function CompareVersions() {
                 </CardBody>
               </Card>
             </Col>
-
-
-
-
-
-
-
-
-
-
-
-
             <Col className="ml-auto mr-auto" md="10" xl="6">
               <p className="category">Version premium</p>
               <Card>
@@ -224,11 +216,6 @@ function CompareVersions() {
                           <i style={ styles.pillsIcon} class="fas fa-pills" />
                           <span style={{ marginLeft: 10 }}>Planning de médicaments</span>
                         </li>
-                        <img
-                          alt="..."
-                          style={styles.premiumIcon}
-                          src={require("assets/img/premium-only.png").default}
-                        />
                         <li style={ styles.list }>
                             <i style={ styles.pillsIcon} class="fas fa-pills" />
                             <span style={{ marginLeft: 10 }}>Historique de recherches</span>
@@ -244,12 +231,15 @@ function CompareVersions() {
                     </TabPane>
                     <TabPane tabId="pills3">
                       <p>
-                        Ci-dessous les liens de Téléchargements de l'application :
+                        Afin d'accéder à la version Premium, vous devez d'abord télécharger la version gratuite  :
                       </p>
                       <p style={{ marginTop: 10 }}>
                         -  <a style={{ color: "darkblue" }} target="_blank" href="https://play.google.com/store/search?q=findicament&c=apps&hl=fr&gl=US">Lien de l'application sur le Playstore</a>
                         <br />
                         -  <a style={{ color: "darkblue" }} target="_blank" href="https://www.apple.com/fr/search/findicament?src=globalnav">Lien de l'application sur Apple store</a>
+                      </p>
+                      <p>
+                        Rendez-vous ensuite dans l'application sur votre page de compte, où vous trouverez l'onglet pour passer à la version <b>Premium</b>.
                       </p>
                     </TabPane>
                   </TabContent>
