@@ -15,18 +15,12 @@ import {
   Col,
 } from "reactstrap";
 
-import { useTable } from 'react-table'
-
 // core components
 
 function CompareVersions() {
-  const [leftFocus, setLeftFocus] = React.useState(false);
-  const [rightFocus, setRightFocus] = React.useState(false);
   const [iconPills, setIconPills] = React.useState("1");
   const [pills, setPills] = React.useState("1");
 
-  const [iconPills2, setIconPills2] = React.useState("4");
-  const [pills2, setPills2] = React.useState("4");
   return (
     <>
       <div className="section section-tabs">
@@ -101,12 +95,22 @@ function CompareVersions() {
                     </TabPane>
                     <TabPane tabId="iconPills2">
                       <p>
-                        Voici les Fonctionnalités auxquelles vous avez accès :
-                        - Scanner de médicaments (10/jour maximum)
-                        - Test de compatibilité de médicaments (5/jour maximum)
-                        - Liste de médicaments
-                        - Planning de médicaments (5 traitements actifs en même temps)
+                        <b>Voici les Fonctionnalités auxquelles vous avez accès :</b>
                       </p>
+                      <ul style={{ textAlign: 'left', marginTop: 15 }}>
+                        <li style={{ marginTop: 15 }}>
+                          Scanner de médicaments (10/jour maximum)
+                        </li>
+                        <li style={{ marginTop: 15 }}>
+                          Test de compatibilité de médicaments (5/jour maximum)
+                        </li>
+                        <li style={{ marginTop: 15 }}>
+                          Liste de médicaments
+                        </li>
+                        <li style={{ marginTop: 15 }}>
+                          Planning de médicaments (5 traitements actifs en même temps)
+                        </li>
+                      </ul>
                     </TabPane>
                     <TabPane tabId="iconPills3">
                       <p>
@@ -201,8 +205,42 @@ function CompareVersions() {
                     </TabPane>
                     <TabPane tabId="pills2">
                       <p>
-                        Fonctionnalités
+                        <b>Voici les Fonctionnalités auxquelles vous avez accès :</b>
                       </p>
+                      <ul style={{ textAlign: 'left' }}>
+                        <li style={ styles.list }>
+                          <i style={ styles.pillsIcon} class="fas fa-pills" />
+                          <span style={{ marginLeft: 10 }}>Scanner de médicaments </span>
+                        </li>
+                        <li style={ styles.list }>
+                          <i style={ styles.pillsIcon} class="fas fa-pills" />
+                          <span style={{ marginLeft: 10 }}>Test de compatibilité de médicaments </span>
+                        </li>
+                        <li style={ styles.list }>
+                          <i style={ styles.pillsIcon} class="fas fa-pills" />
+                          <span style={{ marginLeft: 10 }}>Liste de médicaments</span>
+                        </li>
+                        <li style={ styles.list }>
+                          <i style={ styles.pillsIcon} class="fas fa-pills" />
+                          <span style={{ marginLeft: 10 }}>Planning de médicaments</span>
+                        </li>
+                        <img
+                          alt="..."
+                          style={styles.premiumIcon}
+                          src={require("assets/img/premium-only.png").default}
+                        />
+                        <li style={ styles.list }>
+                            <i style={ styles.pillsIcon} class="fas fa-pills" />
+                            <span style={{ marginLeft: 10 }}>Historique de recherches</span>
+                          <i style={styles.icon} class="fas fa-crown" />
+                        </li>
+                        <li style={ styles.list }>
+                          <i style={ styles.pillsIcon} class="fas fa-pills" />
+                          <span style={{ marginLeft: 10 }}>Mettre en favoris des médicaments</span>
+                          <i style={styles.icon} class="fas fa-crown" />
+                        </li>
+                      </ul>
+                      <span style={styles.smallDescription}><i style={styles.icon} class="fas fa-crown" /> Exclusif à la version Premium</span>
                     </TabPane>
                     <TabPane tabId="pills3">
                       <p>
@@ -228,6 +266,26 @@ function CompareVersions() {
 const styles = {
   logo: {
     width: "50%"
+  },
+  premiumIcon: {
+    width: "15%"
+  },
+  icon: {
+    marginLeft: 5,
+    color: " #ffcc00"
+  },
+  list: {
+    marginTop: 15,
+    listStyleType: "none"
+  },
+  pillsIcon: {
+    color: "#666666"
+  },
+  smallDescription: {
+    fontSize: 10,
+    marginTop: 20,
+    float: "left",
+    fontStyle: 'italic'
   }
 }
 
