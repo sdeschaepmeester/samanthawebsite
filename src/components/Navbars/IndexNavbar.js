@@ -135,7 +135,7 @@ function IndexNavbar() {
                   id="upgrade-to-pro"
                   target="_blank"
                 >
-                  <i className="now-ui-icons ui-1_email-85"></i> 
+                  <i style={styles.icon} className="now-ui-icons ui-1_email-85"></i> 
                   <p> Contactez-nous !</p>
                 </Button>
                 <UncontrolledTooltip target="#upgrade-to-pro">
@@ -163,4 +163,9 @@ function IndexNavbar() {
   );
 }
 
+const styles = {
+  icon: {
+    marginRight : 5
+  }
+}
 export default IndexNavbar;
