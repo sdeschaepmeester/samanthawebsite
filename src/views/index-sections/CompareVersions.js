@@ -15,6 +15,8 @@ import {
   Col,
 } from "reactstrap";
 
+import { useTable } from 'react-table'
+
 // core components
 
 function CompareVersions() {
@@ -22,129 +24,18 @@ function CompareVersions() {
   const [rightFocus, setRightFocus] = React.useState(false);
   const [iconPills, setIconPills] = React.useState("1");
   const [pills, setPills] = React.useState("1");
+
+  const [iconPills2, setIconPills2] = React.useState("4");
+  const [pills2, setPills2] = React.useState("4");
   return (
     <>
-      <div className="section section-tabs">{/* 
+      <div className="section section-tabs">
         <Container>
-          <Row>
-          <Col className="ml-auto mr-auto" md="10" xl="6">
-              <Card>
-              <CardHeader>
-                  <Nav
-                    className="nav-tabs-neutral justify-content-center"
-                    data-background-color="blue"
-                    role="tablist"
-                    tabs
-                  >
-                    <NavItem>
-                      <NavLink
-                        className={pills === "1" ? "active" : ""}
-                        href="#pablo"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setPills("1");
-                        }}
-                      >
-                        Version gratuite
-                      </NavLink>
-                    </NavItem>
-                  </Nav>
-                </CardHeader>
-                <CardBody>
-                  <TabContent
-                    className="text-center"
-                    activeTab={"iconPills" + iconPills}
-                  >
-                    <TabPane tabId="iconPills1">
-                      <p>
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. So when you get something that has
-                        the name Kanye West on it, it’s supposed to be pushing
-                        the furthest possibilities. I will be the leader of a
-                        company that ends up being worth billions of dollars,
-                        because I got the answers. I understand culture. I am
-                        the nucleus.
-                      </p>
-                    </TabPane>
-                    <TabPane tabId="iconPills2">
-                      <p>
-                        I will be the leader of a company that ends up being
-                        worth billions of dollars, because I got the answers. I
-                        understand culture. I am the nucleus. I think that’s a
-                        responsibility that I have, to push possibilities, to
-                        show people, this is the level that things could be at.
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at.
-                      </p>
-                    </TabPane>
-                  </TabContent>
-                </CardBody>
-              </Card>
-              <Card>
-              <CardHeader>
-                  <Nav
-                    className="nav-tabs-neutral justify-content-center"
-                    data-background-color="blue"
-                    role="tablist"
-                    tabs
-                  >
-                    <NavItem>
-                      <NavLink
-                        className={pills === "1" ? "active" : ""}
-                        href="#pablo"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setPills("1");
-                        }}
-                      >
-                        Version gratuite
-                      </NavLink>
-                    </NavItem>
-                  </Nav>
-                </CardHeader>
-                <CardBody>
-                  <TabContent
-                    className="text-center"
-                    activeTab={"iconPills" + iconPills}
-                  >
-                    <TabPane tabId="iconPills1">
-                      <p>
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. So when you get something that has
-                        the name Kanye West on it, it’s supposed to be pushing
-                        the furthest possibilities. I will be the leader of a
-                        company that ends up being worth billions of dollars,
-                        because I got the answers. I understand culture. I am
-                        the nucleus.
-                      </p>
-                    </TabPane>
-                    <TabPane tabId="iconPills2">
-                      <p>
-                        I will be the leader of a company that ends up being
-                        worth billions of dollars, because I got the answers. I
-                        understand culture. I am the nucleus. I think that’s a
-                        responsibility that I have, to push possibilities, to
-                        show people, this is the level that things could be at.
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at.
-                      </p>
-                    </TabPane>
-                  </TabContent>
-                </CardBody>
-              </Card>
-              </Col>
-          </Row>
-        </Container> */}
-                <Container>
           <Row>
             <Col className="ml-auto mr-auto" md="10" xl="6">
               <p className="category">Version gratuite</p>
               <Card>
-              <CardHeader>
+                <CardHeader>
                   <Nav
                     className="nav-tabs-neutral justify-content-center"
                     data-background-color="blue"
@@ -153,11 +44,11 @@ function CompareVersions() {
                   >
                     <NavItem>
                       <NavLink
-                        className={pills === "1" ? "active" : ""}
+                        className={iconPills === "1" ? "active" : ""}
                         href="#pablo"
                         onClick={(e) => {
                           e.preventDefault();
-                          setPills("1");
+                          setIconPills("1");
                         }}
                       >
                         Description
@@ -165,11 +56,11 @@ function CompareVersions() {
                     </NavItem>
                     <NavItem>
                       <NavLink
-                        className={pills === "2" ? "active" : ""}
+                        className={iconPills === "2" ? "active" : ""}
                         href="#pablo"
                         onClick={(e) => {
                           e.preventDefault();
-                          setPills("2");
+                          setIconPills("2");
                         }}
                       >
                         Fonctionnalités
@@ -177,11 +68,11 @@ function CompareVersions() {
                     </NavItem>
                     <NavItem>
                       <NavLink
-                        className={pills === "3" ? "active" : ""}
+                        className={iconPills === "3" ? "active" : ""}
                         href="#pablo"
                         onClick={(e) => {
                           e.preventDefault();
-                          setPills("3");
+                          setIconPills("3");
                         }}
                       >
                         Téléchargements
@@ -196,27 +87,56 @@ function CompareVersions() {
                   >
                     <TabPane tabId="iconPills1">
                       <p>
-                        Description
+                        La version gratuite de Find-icament vous propose un accès aux <b>fonctions limitées</b> de l'application.
                       </p>
+                      <p>
+                        Pour en savoir plus, cliquer sur la section <b>Fonctionnalités</b>.
+                      </p>
+                      <img
+                        alt="..."
+                        style={styles.logo}
+                        src={require("assets/img/logo-free.png").default}
+                      />
+
                     </TabPane>
                     <TabPane tabId="iconPills2">
                       <p>
-                        Fonctionnalités
+                        Voici les Fonctionnalités auxquelles vous avez accès :
+                        - Scanner de médicaments (10/jour maximum)
+                        - Test de compatibilité de médicaments (5/jour maximum)
+                        - Liste de médicaments
+                        - Planning de médicaments (5 traitements actifs en même temps)
                       </p>
                     </TabPane>
                     <TabPane tabId="iconPills3">
                       <p>
-                        Téléchargements
+                        Ci-dessous les liens de Téléchargements de l'application :
                       </p>
-                    </TabPane>
+                      <p style={{ marginTop: 10 }}>
+                        -  <a style={{ color: "darkblue" }} target="_blank" href="https://play.google.com/store/search?q=findicament&c=apps&hl=fr&gl=US">Lien de l'application sur le Playstore</a>
+                        <br />
+                        -  <a style={{ color: "darkblue" }} target="_blank" href="https://www.apple.com/fr/search/findicament?src=globalnav">Lien de l'application sur Apple store</a>
+                      </p> </TabPane>
                   </TabContent>
                 </CardBody>
               </Card>
             </Col>
+
+
+
+
+
+
+
+
+
+
+
+
             <Col className="ml-auto mr-auto" md="10" xl="6">
               <p className="category">Version premium</p>
               <Card>
-              <CardHeader>
+                <CardHeader>
                   <Nav
                     className="nav-tabs-neutral justify-content-center"
                     data-background-color="blue"
@@ -264,21 +184,34 @@ function CompareVersions() {
                 <CardBody>
                   <TabContent
                     className="text-center"
-                    activeTab={"iconPills" + iconPills}
+                    activeTab={"pills" + pills}
                   >
-                    <TabPane tabId="iconPills1">
+                    <TabPane tabId="pills1">
                       <p>
-                        Description 2
+                        La version premium de Find-icament vous propose un accès à <b>toutes les fonctionnalités</b> de l'application, sans publicité.
+                      </p>
+                      <p>
+                        Pour en savoir plus, cliquer sur la section <b>Fonctionnalités</b>.
+                      </p>
+                      <img
+                        alt="..."
+                        style={styles.logo}
+                        src={require("assets/img/logo-premium.png").default}
+                      />
+                    </TabPane>
+                    <TabPane tabId="pills2">
+                      <p>
+                        Fonctionnalités
                       </p>
                     </TabPane>
-                    <TabPane tabId="iconPills2">
+                    <TabPane tabId="pills3">
                       <p>
-                        Fonctionnalités 2
+                        Ci-dessous les liens de Téléchargements de l'application :
                       </p>
-                    </TabPane>
-                    <TabPane tabId="iconPills3">
-                      <p>
-                        Téléchargements 2
+                      <p style={{ marginTop: 10 }}>
+                        -  <a style={{ color: "darkblue" }} target="_blank" href="https://play.google.com/store/search?q=findicament&c=apps&hl=fr&gl=US">Lien de l'application sur le Playstore</a>
+                        <br />
+                        -  <a style={{ color: "darkblue" }} target="_blank" href="https://www.apple.com/fr/search/findicament?src=globalnav">Lien de l'application sur Apple store</a>
                       </p>
                     </TabPane>
                   </TabContent>
@@ -290,6 +223,12 @@ function CompareVersions() {
       </div>
     </>
   );
+}
+
+const styles = {
+  logo: {
+    width: "50%"
+  }
 }
 
 export default CompareVersions;
