@@ -127,10 +127,66 @@ function LoginPage() {
             </Col>
           </Container>
         </div>
+            <Navbar style={{ backgroundColor: "#00ccff", opacity: 0.5}} >
+              <Container>
+                <div className="navbar-translate">
+                  <NavbarBrand
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <i class="fas fa-info-circle" style={{ marginRight: 15 }} />
+                    Vous devez utiliser vos identifiants de connexion de l'application mobile Find-icament pour vous connecter.
+                  </NavbarBrand>
+                  <button
+                    onClick={() => {
+                      document.documentElement.classList.toggle("nav-open");
+                      setCollapseOpen(!collapseOpen);
+                    }}
+                    aria-expanded={collapseOpen}
+                    className="navbar-toggler"
+                    type="button"
+                  >
+                    <span className="navbar-toggler-bar bar1"></span>
+                    <span className="navbar-toggler-bar bar2"></span>
+                    <span className="navbar-toggler-bar bar3"></span>
+                  </button>
+                </div>
+                <Collapse isOpen={collapseOpen} navbar>
+                  <Nav className="ml-auto" navbar>
+                    <NavItem className="active">
+                      <NavLink
+                        href="#pablo"
+                        onClick={(e) => e.preventDefault()}
+                      >
+                        <p>Discover</p>
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink
+                        href="#pablo"
+                        onClick={(e) => e.preventDefault()}
+                      >
+                        <p>Profile</p>
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink
+                        href="#pablo"
+                        onClick={(e) => e.preventDefault()}
+                      >
+                        <p>Settings</p>
+                      </NavLink>
+                    </NavItem>
+                  </Nav>
+                </Collapse>
+              </Container>
+            </Navbar>
         <TransparentFooter />
       </div>
     </>
   );
 }
 
+const styles={
+}
 export default LoginPage;
