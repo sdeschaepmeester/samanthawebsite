@@ -16,11 +16,25 @@ import {
   Col,
 } from "reactstrap";
 
+import {
+  Collapse,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  UncontrolledDropdown,
+  NavbarBrand,
+  Navbar,
+  NavItem,
+  NavLink,
+  Nav,
+} from "reactstrap";
+
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+import NavbarLogin from "components/Navbars/NavbarLogin.js";
 import TransparentFooter from "components/Footers/TransparentFooter.js";
 
 function LoginPage() {
+  const [collapseOpen, setCollapseOpen] = React.useState(false);
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
   React.useEffect(() => {
@@ -36,13 +50,13 @@ function LoginPage() {
   }, []);
   return (
     <>
-      <ExamplesNavbar />
-      <div className="page-header clear-filter" filter-color="blue">
+      <NavbarLogin />
+      <div className="page-header" >
         <div
           className="page-header-image"
           style={{
             backgroundImage:
-              "url(" + require("assets/img/login.jpg").default + ")",
+              "url(" + require("assets/img/login-image.png").default + ")",
           }}
         ></div>
         <div className="content">
@@ -67,11 +81,11 @@ function LoginPage() {
                     >
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="now-ui-icons users_circle-08"></i>
+                          <i className="now-ui-icons ui-1_email-85"></i>
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="First Name..."
+                        placeholder="Adresse email"
                         type="text"
                         onFocus={() => setFirstFocus(true)}
                         onBlur={() => setFirstFocus(false)}
@@ -85,11 +99,11 @@ function LoginPage() {
                     >
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="now-ui-icons text_caps-small"></i>
+                          <i className="now-ui-icons ui-1_lock-circle-open"></i>
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Last Name..."
+                        placeholder="Mot de passe"
                         type="text"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
@@ -105,30 +119,8 @@ function LoginPage() {
                       onClick={(e) => e.preventDefault()}
                       size="lg"
                     >
-                      Get Started
+                      Connexion
                     </Button>
-                    <div className="pull-left">
-                      <h6>
-                        <a
-                          className="link"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          Create Account
-                        </a>
-                      </h6>
-                    </div>
-                    <div className="pull-right">
-                      <h6>
-                        <a
-                          className="link"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          Need Help?
-                        </a>
-                      </h6>
-                    </div>
                   </CardFooter>
                 </Form>
               </Card>

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
-  Button,
+    Button,
   Collapse,
   DropdownToggle,
   DropdownMenu,
@@ -17,7 +17,7 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-function IndexNavbar() {
+function NavbarLogin() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   React.useEffect(() => {
@@ -50,19 +50,36 @@ function IndexNavbar() {
           }}
         />
       ) : null}
-      <Navbar className={"fixed-top " + navbarColor} expand="lg" color="info">
+      <Navbar className={"fixed-top " + navbarColor} color="info" expand="lg">
         <Container>
-          <div className="navbar-translate">
-            <NavbarBrand
-              href="./index"
-              target="_blank"
-              id="navbar-brand"
+          <UncontrolledDropdown className="button-dropdown">
+            <DropdownToggle
+              caret
+              data-toggle="dropdown"
+              href="#pablo"
+              id="navbarDropdown"
+              tag="a"
+              onClick={(e) => e.preventDefault()}
             >
+              <span className="button-bar"></span>
+              <span className="button-bar"></span>
+              <span className="button-bar"></span>
+            </DropdownToggle>
+            <DropdownMenu aria-labelledby="navbarDropdown">
+              <DropdownItem header tag="a">
+                Redirections
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Liste de médicament
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Planning
+              </DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+          <div className="navbar-translate">
+            
               Find-icament
-            </NavbarBrand>
-            <UncontrolledTooltip target="#navbar-brand">
-              Find-icament, l'application médicale qui vous sécurise !
-            </UncontrolledTooltip>
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {
@@ -155,17 +172,6 @@ function IndexNavbar() {
                   Suivez-nous sur Twitter
                 </UncontrolledTooltip>
               </NavItem>
-              <NavItem>
-              <NavLink
-                  to="/login-page"
-                  outline
-                  size="lg"
-                  tag={Link}
-                >
-                  <i style={{ fontSize: 20, float: "right" }} class="fas fa-user"></i>
-                  <p className="d-lg-none d-xl-none">Connexion</p>
-                </NavLink>
-              </NavItem>
             </Nav>
           </Collapse>
         </Container>
@@ -175,8 +181,9 @@ function IndexNavbar() {
 }
 
 const styles = {
-  icon: {
-    marginRight : 5
+    icon: {
+      marginRight : 5
+    }
   }
-}
-export default IndexNavbar;
+
+export default NavbarLogin;
