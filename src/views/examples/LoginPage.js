@@ -51,7 +51,7 @@ function LoginPage() {
   return (
     <>
       <NavbarLogin />
-      <div className="page-header" >
+      <div className="page-header clear-filter" filter-color="blue" >
         <div
           className="page-header-image"
           style={{
@@ -127,7 +127,7 @@ function LoginPage() {
             </Col>
           </Container>
         </div>
-            <Navbar style={{ backgroundColor: "#00ccff", opacity: 0.5}} >
+            <Navbar style={{ backgroundColor: "#00ccff", opacity: 0.65}} >
               <Container>
                 <div className="navbar-translate">
                   <NavbarBrand
@@ -188,5 +188,13 @@ function LoginPage() {
 }
 
 const styles={
+  background:{
+    position: "absolute",
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    width: "100%",
+    height: "100%",
+    zIndex: -1,
+  }
 }
 export default LoginPage;
