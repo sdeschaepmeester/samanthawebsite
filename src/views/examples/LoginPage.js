@@ -131,8 +131,6 @@ function LoginPage() {
               <Container>
                 <div className="navbar-translate">
                   <NavbarBrand
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
                   >
                     <i class="fas fa-info-circle" style={{ marginRight: 15 }} />
                     Vous devez utiliser vos identifiants de connexion de l'application mobile Find-icament pour vous connecter.
