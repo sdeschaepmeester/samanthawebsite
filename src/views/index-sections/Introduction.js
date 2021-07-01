@@ -44,7 +44,7 @@ function Introduction() {
                     <br/>
                     Basée sur une base de données officielle du gouvernement, nous proposons une large liste de médicaments.
                     <br/><br/>
-                    <b>Parcourez cette liste, scanner une boite de médicament</b> pour retrouvez toutes les informations dessus.
+                    <b>Parcourez cette liste, scannez une boite de médicament</b> pour retrouvez toutes les informations dessus.
                     Un <b>planning</b> vous propose également de créer des rappels pour vos traitements.
                     <br /><br />
                     L'application est disponible sur Android et IOS.
