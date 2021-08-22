@@ -81,21 +81,26 @@ function IndexNavbar() {
           >
             <Nav navbar>
               <NavItem>
-                <NavLink
-                  href="https://play.google.com/store/search?q=find-icament&c=apps&hl=fr&gl=US"
+              <NavLink
+                  to="/CV"
+                  outline
+                  size="lg"
+                  tag={Link}
                 >
                   <i className="now-ui-icons business_badge"></i>
                   <p>Consulter mon CV</p>
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink
-                  href="https://www.apple.com/fr/search/find-icament?src=globalnav"
+              <NavLink
+                  to="/mes-projets"
+                  outline
+                  size="lg"
+                  tag={Link}
                 >
                   <i className="now-ui-icons business_briefcase-24"></i>
                   <p>Mes projets</p>
                 </NavLink>
-                
               </NavItem>
               <NavItem>
                 <NavLink

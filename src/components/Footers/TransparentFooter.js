@@ -9,14 +9,7 @@ function TransparentFooter() {
     <footer className="footer">
       <Container>
         <div className="copyright" id="copyright">
-          © {new Date().getFullYear()}, created by{" "}
-          <a
-            href="./index"
-            target="_blank"
-            style={{ color: "white"}}
-          >
-            Find-icament
-          </a>
+          Published in {new Date().getFullYear()}
         </div>
       </Container>
     </footer>

@@ -79,20 +79,7 @@ function NavbarLogin() {
           </UncontrolledDropdown>
           <div className="navbar-translate">
             
-              <a href="./index">Find-icament</a>
-            <button
-              className="navbar-toggler navbar-toggler"
-              onClick={() => {
-                document.documentElement.classList.toggle("nav-open");
-                setCollapseOpen(!collapseOpen);
-              }}
-              aria-expanded={collapseOpen}
-              type="button"
-            >
-              <span className="navbar-toggler-bar top-bar"></span>
-              <span className="navbar-toggler-bar middle-bar"></span>
-              <span className="navbar-toggler-bar bottom-bar"></span>
-            </button>
+              <a href="./index">Portfolio</a>
           </div>
           <Collapse
             className="justify-content-end"

@@ -30,6 +30,9 @@ import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/examples/LoginPage.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
+import MesProjets from "views/examples/MesProjets.js";
+import CV from "views/examples/CV.js";
+
 
 ReactDOM.render(
   <BrowserRouter>
@@ -51,6 +54,14 @@ ReactDOM.render(
         <Route
           path="/login-page"
           render={(props) => <LoginPage {...props} />}
+        />
+        <Route
+          path="/mes-projets"
+          render={(props) => <MesProjets {...props} />}
+        />
+                <Route
+          path="/CV"
+          render={(props) => <CV {...props} />}
         />
         <Redirect to="/index" />
         <Redirect from="/" to="/index" />
