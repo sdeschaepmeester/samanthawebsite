@@ -32,7 +32,6 @@ function Index() {
         <IndexHeader />
         <div className="main">
           <Introduction />
-          <CompareVersions />
           
         </div>
         <DarkFooter />

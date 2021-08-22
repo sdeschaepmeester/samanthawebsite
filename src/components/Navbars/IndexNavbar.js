@@ -58,11 +58,8 @@ function IndexNavbar() {
               target="_blank"
               id="navbar-brand"
             >
-              Find-icament
+              Portfolio
             </NavbarBrand>
-            <UncontrolledTooltip target="#navbar-brand">
-              Find-icament, l'application médicale qui vous sécurise !
-            </UncontrolledTooltip>
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {
@@ -87,72 +84,45 @@ function IndexNavbar() {
                 <NavLink
                   href="https://play.google.com/store/search?q=find-icament&c=apps&hl=fr&gl=US"
                 >
-                  <i className="now-ui-icons arrows-1_cloud-download-93"></i>
-                  <p>Télécharger sur le Playstore</p>
+                  <i className="now-ui-icons business_badge"></i>
+                  <p>Consulter mon CV</p>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink
                   href="https://www.apple.com/fr/search/find-icament?src=globalnav"
                 >
-                  <i className="now-ui-icons arrows-1_cloud-download-93"></i>
-                  <p>Télécharger sur l'App store</p>
+                  <i className="now-ui-icons business_briefcase-24"></i>
+                  <p>Mes projets</p>
                 </NavLink>
                 
               </NavItem>
-              <UncontrolledDropdown nav>
-                <DropdownMenu>
-                  <DropdownItem to="/index" tag={Link}>
-                    <i className="now-ui-icons business_chart-pie-36 mr-1"></i>
-                    All components
-                  </DropdownItem>
-                  <DropdownItem
-                    href="https://demos.creative-tim.com/now-ui-kit-react/#/documentation/introduction?ref=nukr-index-navbar"
-                    target="_blank"
-                  >
-                    <i className="now-ui-icons design_bullet-list-67 mr-1"></i>
-                    Documentation
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              <NavItem>
+                <NavLink
+                  href="https://www.linkedin.com/in/samantha-deschaepmeester/"
+                  target="_blank"
+                  id="linkedin-tooltip"
+                >
+                  <i className="fab fa-linkedin"></i>
+                </NavLink>
+                <UncontrolledTooltip target="#linkedin-tooltip">
+                  LinkedIn
+                </UncontrolledTooltip>
+              </NavItem>
               <NavItem>
                 <Button
                   className="nav-link btn-neutral"
                   color="info"
-                  href="mailto:contact.findicament@gmail.com"
+                  href="mailto:deschaepmeester.samantha@gmail.com"
                   id="upgrade-to-pro"
                   target="_blank"
                 >
                   <i style={styles.icon} className="now-ui-icons ui-1_email-85"></i> 
-                  <p> Contactez-nous !</p>
+                  <p> Contactez-moi !</p>
                 </Button>
                 <UncontrolledTooltip target="#upgrade-to-pro">
-                  contact.findicament@gmail.com
+                  deschaepmeester.samantha@gmail.com
                 </UncontrolledTooltip>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  href="https://twitter.com/findicament"
-                  target="_blank"
-                  id="twitter-tooltip"
-                >
-                  <i className="fab fa-twitter"></i>
-                  <p className="d-lg-none d-xl-none">Twitter</p>
-                </NavLink>
-                <UncontrolledTooltip target="#twitter-tooltip">
-                  Suivez-nous sur Twitter
-                </UncontrolledTooltip>
-              </NavItem>
-              <NavItem>
-              <NavLink
-                  to="/login-page"
-                  outline
-                  size="lg"
-                  tag={Link}
-                >
-                  <i style={{ fontSize: 20, float: "right" }} class="fas fa-user"></i>
-                  <p className="d-lg-none d-xl-none">Connexion</p>
-                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>

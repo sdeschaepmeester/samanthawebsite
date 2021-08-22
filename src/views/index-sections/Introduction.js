@@ -17,24 +17,25 @@ function Introduction() {
                 <span>
                   <Col sm="10">
                     <img
-                      style={{ left: 0 }}
+                      style={{ left: 0, height: 200, width: 200 }}
                       alt="..."
                       className="rounded-circle"
-                      src={require("assets/img/old-phone.jpg").default}
+                      src={require("assets/img/photo.jpg").default}
                     />
                   </Col>
                 </span>
               </BrowserView>
 
-              Publiée en 2021, Find-icament est une application médicale
-              vous permettant de <b>gérer vos traitements</b> tout en vous donnant divers renseignements sur ces médicaments.
+              Passionnée par le développement informatique depuis des années, 
               <br />
-              Basée sur une base de données officielle du gouvernement, nous proposons une large liste de médicaments.
-              <br /><br />
-              <b>Parcourez cette liste, scannez une boite de médicament</b> pour retrouvez toutes les informations dessus.
-              Un <b>planning</b> vous propose également de créer des rappels pour vos traitements.
-              <br /><br />
-              L'application est disponible sur Android et IOS.
+              J'aime apprendre de nouvelles technologies et faire mes projets personnels.
+            <br />
+            Actuellement étudiante en master ingénieur informatique option IA à l'ESIEE, je recherche une 
+            entreprise pour un contrat d'apprentissage de deux ans.
+            <br />
+            Ce site web me permet de vous montrez qui je suis de manière un peu plus approfondie qu'un CV.<br />
+            <br />
+            <b>N'hésitez pas à me contactez pour plus d'informations si mon profil attire votre attention pour une opportunité professionnelle.</b>
             </p>
           </div>
         </Container>

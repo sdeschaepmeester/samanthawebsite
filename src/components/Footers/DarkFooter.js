@@ -10,15 +10,7 @@ function DarkFooter() {
       <Container>
         <div className="copyright" id="copyright">
           © {new Date().getFullYear()}, Designed by{" "}
-            Find-icament
-          . Coded by{" "}
-          <a
-            href="https://codingfactory.fr/"
-            target="_blank"
-          >
-            Coding Factory
-          </a>
-          .
+        Samantha Deschaepmeester
         </div>
       </Container>
     </footer>

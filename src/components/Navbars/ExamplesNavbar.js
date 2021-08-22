@@ -93,10 +93,10 @@ function ExamplesNavbar() {
               target="_blank"
               id="navbar-brand"
             >
-              Now Ui Kit
+              Portfolio
             </NavbarBrand>
             <UncontrolledTooltip target="#navbar-brand">
-              Created by Find-icament
+              Samantha Deschaepmeester
             </UncontrolledTooltip>
             <button
               className="navbar-toggler navbar-toggler"

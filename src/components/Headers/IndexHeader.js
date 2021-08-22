@@ -29,7 +29,7 @@ function IndexHeader() {
           className="page-header-image"
           style={{
             backgroundImage:
-              "url(" + require("assets/img/header.png").default + ")",
+              "url(" + require("assets/img/header.jpg").default + ")",
           }}
           ref={pageHeader}
         ></div>
@@ -37,11 +37,11 @@ function IndexHeader() {
           <div className="content-center brand">
             <img
               alt="..."
-              className="n-logo"
+              style={{width: 200, height: 200}}
               src={require("assets/img/now-logo.png").default}
             ></img>
-            <h1 className="h1-seo">Find-icament</h1>
-            <h3>Le partenaire de vos traitements.</h3>
+            <h1 className="h1-seo">Portfolio de Samantha Deschaepmeester</h1>
+            <h3>Développeuse fullstack</h3>
           </div>
         </Container>
       </div>
