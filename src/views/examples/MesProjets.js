@@ -84,7 +84,7 @@ function MesProjets() {
                                                     <img src="https://zupimages.net/up/21/33/femj.jpg" style={{ width: 100 }} alt="..." />
                                                 </td>
                                                 <td>My desobedient fox</td>
-                                                <td>Un jeu mobile où vous vous occupez de votre renard.</td>
+                                                <td>Un jeu mobile hybride où vous vous occupez de votre renard. Donner lui à manger, gérer son énergie et aider le à vaincre ses adversaires !</td>
                                                 <td>Javascript, react-native, Expo <br />Aucun moteur de jeu.</td>
                                                 <td class="text-right">Commencé le 22/07/21.<br />Première version estimée début Septembre.</td>
                                             </tr>

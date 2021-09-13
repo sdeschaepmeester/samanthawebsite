@@ -60,75 +60,14 @@ function CV() {
                             "url(" + require("assets/img/login-image.png").default + ")",
                     }}
                 ></div>
-                <div className="content">
-                    <Container>
-                        <Col className="ml-auto mr-auto" md="12">
-                            <Card className="card-login card-plain">
-                                <CardHeader className="text-center">
-                                    Ci-dessous la liste de mes projets personnels en cours :
-                                </CardHeader>
-                                <CardBody>
-                                    Afficher cv
-                                </CardBody>
-                                <CardFooter className="text-center">
-                                </CardFooter>
-                            </Card>
-                        </Col>
+                <div >
+                    <Container style={{marginTop: 100}}>
+                        {/* <button type="button" class="btn btn-info" style={{top: 0, left: -10, position: 'absolute'}}>Télécharger mon CV</button> */}
+                    
+                        <img src="https://zupimages.net/up/21/37/36we.jpg" style={{ width: 650, height: 900}} alt="..." />
+                           
                     </Container>
                 </div>
-                <Navbar style={{ backgroundColor: "grey", opacity: 0.65 }} >
-                    <Container>
-                        <div className="navbar-translate">
-                            <NavbarBrand
-                            >
-                                <i class="fas fa-info-circle" style={{ marginRight: 15 }} />
-                                Information : Cette liste est non-exhaustive
-                            </NavbarBrand>
-                            <button
-                                onClick={() => {
-                                    document.documentElement.classList.toggle("nav-open");
-                                    setCollapseOpen(!collapseOpen);
-                                }}
-                                aria-expanded={collapseOpen}
-                                className="navbar-toggler"
-                                type="button"
-                            >
-                                <span className="navbar-toggler-bar bar1"></span>
-                                <span className="navbar-toggler-bar bar2"></span>
-                                <span className="navbar-toggler-bar bar3"></span>
-                            </button>
-                        </div>
-                        <Collapse isOpen={collapseOpen} navbar>
-                            <Nav className="ml-auto" navbar>
-                                <NavItem className="active">
-                                    <NavLink
-                                        href="#pablo"
-                                        onClick={(e) => e.preventDefault()}
-                                    >
-                                        <p>Discover</p>
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink
-                                        href="#pablo"
-                                        onClick={(e) => e.preventDefault()}
-                                    >
-                                        <p>Profile</p>
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink
-                                        href="#pablo"
-                                        onClick={(e) => e.preventDefault()}
-                                    >
-                                        <p>Settings</p>
-                                    </NavLink>
-                                </NavItem>
-                            </Nav>
-                        </Collapse>
-                    </Container>
-                </Navbar>
-                <TransparentFooter />
             </div>
         </>
     );
